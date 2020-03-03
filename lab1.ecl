@@ -1,4 +1,3 @@
-
 %%%As seen in https://people.iee.ihu.gr/~demos/Downloads/AI_Lab3.pdf
 
 %%% figure/2
