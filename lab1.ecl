@@ -1,3 +1,4 @@
+
 %%%As seen in https://people.iee.ihu.gr/~demos/Downloads/AI_Lab3.pdf
 
 %%% figure/2
@@ -22,7 +23,7 @@ figure(15, bottomright(square, square)).
 figure(16, topright(square, square)).
 
 %%% relation/3
-%%% Defines relationships of shapes
+%%% Defines tne possible relationships of shapes
 relation(middle(S1,S2), middle(S2,S1), inverse).
 relation(middle(S1,_), middle(S1,_), changeout).
 relation(middle(_,S2), middle(_,S2), changein).
@@ -35,7 +36,8 @@ relation(bottomright(S1,S2), topleft(S1,S2), diagmirror).
 relation(bottomleft(S1,S2), topright(S1,S2), diagmirror).
 
 %%% analogy/4
-%%% Και που ξες εσυ οτι ειναι το Middle
+%%% Solves the analogy problem.
+%%% If F1 is similar to F2, then F3 is similar to F4
 analogy(F1,F2,F3,F4):-
 	figure(F1, S1),
 	figure(F2, S2),
@@ -43,4 +45,5 @@ analogy(F1,F2,F3,F4):-
 	figure(F4, S4),
 	relation(S1, S2, R),
 	relation(S3, S4, R),
+	F1\=F2,
 	F3\=F4.
