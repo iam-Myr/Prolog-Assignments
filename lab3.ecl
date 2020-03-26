@@ -16,7 +16,7 @@ sum_even([H|T], Sum):-
 %%%%%%%%%%%%%%%%%%%%%%%     ASSIGNMENT 7
 %%%replace/4
 %%%replace(X,Y,List,ResultList)
-replace(X,Y,[X|T],[Y|T]).
+replace(X,Y,[X|Tail],[Y|Tail]).
 
-replace(X,Y,[H|T],[H|T2]):-
-    replace(X,Y, T, T2).
+replace(X,Y,[H|Tail],[H|Answer]):-
+    replace(X,Y, Tail, Answer).
