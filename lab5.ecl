@@ -10,7 +10,6 @@ lunion([X|Rest], List, [X|IntList]):-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%reduce/3
-
 reduce(_,[X],X).
 reduce(Operation,[X,Y|Tail],Result):-
     C =.. [Operation,X,Y,Result2],
