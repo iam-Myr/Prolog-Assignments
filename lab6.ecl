@@ -34,8 +34,8 @@ Arg1 xor Arg2 :- Arg2, --Arg1.
 Arg1 nor Arg2 :- --(Arg1 or Arg2).
 Arg1 nand Arg2 :- --(Arg1 and Arg2).
 
-1.
-0:-!,fail.
+t.
+f:-!,fail.
 
 %%%%%%%%%%EXC 4
 %%%%proper_set_s/1
@@ -43,14 +43,14 @@ proper_set_s([]).
 proper_set_s(List):-
     setof( X, member(X, List), List).
 
-%%%%%%%%%%EXC
+%%%%%%%%%%EXC 8
 %%%%model/1
 model(Term):-
 	term_variables(Term,[]),
 	call(Term).
 
 model(Term):-
-    term_variables(Term,[Var|Rest]),
+    term_variables(Term,[Var|_Rest]),
     member(Var,[t,f]),
     model(Term).
 
@@ -61,3 +61,6 @@ theory([Exp]):-
 theory([Exp|Rest]):-
     model(Exp),
     theory(Rest).
+
+%%%Part c:
+%%%?- setof(X, theory([Y, Y ==> X or Y, X or Y ==> Y]), Sol).
