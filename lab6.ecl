@@ -55,8 +55,7 @@ model(Term):-
     model(Term).
 
 %%%theory/1
-theory([Exp]):-
-    model(Exp).
+theory([]).
 
 theory([Exp|Rest]):-
     model(Exp),
