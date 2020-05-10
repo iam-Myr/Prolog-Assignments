@@ -1,4 +1,4 @@
-%%%As seen in https://people.iee.ihu.gr/~demos/Downloads/AI_Lab3.pdf
+%%%As seen on https://people.iee.ihu.gr/~demos/Downloads/AI_Lab3.pdf
 
 %%% figure/2
 %%% Representation of the IQ Test shapes
